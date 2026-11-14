@@ -4,13 +4,16 @@ version: 2.4.0-a.0.z
 type: lib,binless
 language: c
 project: uthash
-summary: uthash C library
+summary: Macro-based hash table and data structure C library
 license: BSD-1-Clause ; BSD 1-Clause License.
+topics: hash table, linked list, dynamic array, data structures, macros
 description-file: README.md
 package-description-file: PACKAGE-README.md
 changes-file: ChangeLog.txt
-url: https://example.org/upstream
-email: upstream@example.org
+url: https://troydhanson.github.io/uthash/
+doc-url: https://troydhanson.github.io/uthash/userguide.html
+src-url: https://github.com/troydhanson/uthash
+email: uthash@googlegroups.com ; Mailing list.
 package-url: https://github.com/build2-packaging/uthash
 package-email: packaging@build2.org ; Mailing list.
 depends: * build2 >= 0.18.0
