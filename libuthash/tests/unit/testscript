@@ -1,0 +1,7 @@
+# Some tests open their input files by relative name so link them into the
+# working directory. Every test is expected to print its .ans file exactly.
+#
+ln -s $src_base/test11.dat ./ ;
+ln -s $src_base/test14.dat ./ ;
+ln -s $src_base/test65.dat ./ ;
+$* >>>$src_base/$path.base($path.leaf($0)).ans

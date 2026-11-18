@@ -1,0 +1,9 @@
+import libs = libuthash%lib{uthash}
+
+for t: c{test*}
+{
+  n = $name($t)
+
+  ./: exe{$n}: $t $libs testscript
+  exe{$n}: file{$(n).ans *.dat}: include = adhoc
+}
