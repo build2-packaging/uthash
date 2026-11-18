@@ -18,10 +18,16 @@ lib{uthash}:
   c.export.libs = $intf_libs
 }
 
-# Install recreating subdirectories.
+# Make sure headers installed into, say, /usr/include/uthash/ can also
+# be included without the directory prefix for backwards compatibility.
+#
+lib{uthash}: c.pkgconfig.include = include/ include/uthash/
+
+# Install into the uthash/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
 #
 h{*}:
 {
-  install         = include/
+  install         = include/uthash/
   install.subdirs = true
 }
